@@ -4,6 +4,10 @@ FROM golang:latest
 # Change work directory
 WORKDIR /base
 
+# Copy depencencies
+COPY go.* ./
+RUN go mod download
+
 # Copy files to /base
 COPY . .
 

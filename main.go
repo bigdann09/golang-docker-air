@@ -12,7 +12,7 @@ func main() {
 	router.HandleFunc("GET /greet", func(res http.ResponseWriter, req *http.Request) {
 		response := map[string]interface{}{
 			"status":  http.StatusOK,
-			"message": "hello world",
+			"message": "hello world danny",
 		}
 
 		data, err := json.Marshal(&response)

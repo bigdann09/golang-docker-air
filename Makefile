@@ -1,4 +1,4 @@
-.PHONY: docker-run
+.PHONY: docker-run docker-build
 
 docker-build:
 	docker buildx build -t basse .

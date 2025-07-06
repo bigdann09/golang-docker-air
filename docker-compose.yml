@@ -1,0 +1,10 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: basse
+    ports:
+      - "8002:8002"
+    volumes:
+      - .:/api

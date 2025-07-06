@@ -1,0 +1,17 @@
+# Create new build from base image
+FROM golang:latest
+
+# Change work directory
+WORKDIR /base
+
+# Copy files to /base
+COPY . .
+
+# Run program build
+RUN GOOS=linux go build -o main main.go
+
+# Expose default application port
+EXPOSE 8002
+
+# Run command
+CMD ["./main"]
